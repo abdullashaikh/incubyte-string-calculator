@@ -1,6 +1,9 @@
 export class StringCalculator {
     add(numbers: string): number {
-      return 0;
+      if (numbers === '') return 0;
+  
+      const nums = numbers.split(',').map(n => Number(n));
+      return nums.reduce((a, b) => a + b, 0);
     }
   }
   
