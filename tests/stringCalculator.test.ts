@@ -7,7 +7,8 @@ describe('StringCalculator', () => {
     calc = new StringCalculator();
   });
 
-  test('support custom single-char delimiter', () => {
-    expect(calc.add('//;\n1;2')).toBe(3);
+  test('negative numbers throw an exception', () => {
+    expect(() => calc.add('1,-2,3,-4')).toThrow('negative numbers not allowed -2,-4');
   });
+
 });
