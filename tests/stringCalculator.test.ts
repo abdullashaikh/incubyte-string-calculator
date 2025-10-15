@@ -7,7 +7,8 @@ describe('StringCalculator', () => {
     calc = new StringCalculator();
   });
 
-  test('empty string returns 0', () => {
-    expect(calc.add('')).toBe(0);
+  test('single number returns that number', () => {
+    expect(calc.add('1')).toBe(1);
   });
+
 });
