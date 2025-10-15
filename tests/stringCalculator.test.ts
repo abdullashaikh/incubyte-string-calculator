@@ -7,7 +7,7 @@ describe('StringCalculator', () => {
     calc = new StringCalculator();
   });
 
-  test('handle newlines between numbers', () => {
-    expect(calc.add('1\n2,3')).toBe(6);
+  test('support custom single-char delimiter', () => {
+    expect(calc.add('//;\n1;2')).toBe(3);
   });
 });
